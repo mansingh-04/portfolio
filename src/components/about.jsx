@@ -1,30 +1,14 @@
 import React, { useEffect, useRef } from 'react';
+import profileImage from '../images/profile.png';
 import './styles/about.css';
 
 export default function About() {
   const aboutRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
     if (aboutRef.current) {
-      observer.observe(aboutRef.current);
+      aboutRef.current.classList.add('visible');
     }
-
-    return () => {
-      if (aboutRef.current) {
-        observer.unobserve(aboutRef.current);
-      }
-    };
   }, []);
 
   return (
@@ -38,13 +22,13 @@ export default function About() {
             </h2>
             <div className="about-description">
               <p>
-              I'm a first-year BTech student specializing in Computer Science and Artificial Intelligence, with a strong passion for technology and innovation. As a tech enthusiast, I enjoy building responsive, user-centric web applications and exploring the intersection of software engineering and AI.
+                I'm a first-year BTech student specializing in Computer Science and Artificial Intelligence, with a strong passion for technology and innovation. As a tech enthusiast, I enjoy building responsive, user-centric web applications and exploring the intersection of software engineering and AI.
               </p>
               <p>
-              I have hands-on experience with frontend development using HTML, CSS, JavaScript, and React, and I'm continuously expanding my skills in Python and Flask to grow as a full-stack developer. I love turning ideas into real-world solutions and am always looking to learn, collaborate, and build impactful tech.
+                I have hands-on experience with frontend development using HTML, CSS, JavaScript, and React, and I'm continuously expanding my skills in Python and Flask to grow as a full-stack developer. I love turning ideas into real-world solutions and am always looking to learn, collaborate, and build impactful tech.
               </p>
               <p>
-              I aim to contribute to projects that challenge me, help me grow technically, and allow me to make meaningful contributions in the tech space.
+                I aim to contribute to projects that challenge me, help me grow technically, and allow me to make meaningful contributions in the tech space.
               </p>
             </div>
           </div>
@@ -52,7 +36,7 @@ export default function About() {
             <div className="image-container">
               <div className="image-frame">
                 <div className="image-overlay">
-                  <img src="/images/profile.png" alt="Profile" />
+                <img src={profileImage} alt="Profile" />
                 </div>
               </div>
             </div>
@@ -61,4 +45,4 @@ export default function About() {
       </div>
     </section>
   );
-} 
+}

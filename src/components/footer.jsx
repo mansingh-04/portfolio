@@ -12,7 +12,7 @@ const Footer = () => {
             <h3 className="footer-name">Manpreet Singh</h3>
             <p className="footer-title">Full Stack Developer</p>
           </div>
-          
+
           <div className="footer-contact">
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
@@ -47,7 +47,8 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p className="footer-copyright"> Crafted with code, coffee, and curiosity.
+          <p className="footer-copyright">
+            &copy; {currentYear} Crafted with code, coffee, and curiosity.
           </p>
           <div className="footer-links">
             <a href="#about">About</a>
@@ -61,4 +62,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;
