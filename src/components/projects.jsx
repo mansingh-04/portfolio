@@ -14,6 +14,12 @@ export default function Projects() {
       description: 'This Flask web app provides an AI-powered interface for users to submit text-based queries and receive structured responses. The AI processes input in real-time and returns formatted results for improved readability.',
       technologies: ['Python', 'Flask', 'HTML', 'CSS', 'JavaScript','Railway(for deployment)'],
       hostedUrl: 'https://api-production-5dca.up.railway.app/'
+    },
+    {
+      title: 'Discord Clone Interface - Project Description',
+      description: 'A front-end clone of Discord that mimics the core interface and experience of the original app. It includes a modern and responsive UI with dynamic theming and user-friendly navigation, providing a strong foundation for building a full-stack application.',
+      technologies: ['React', 'HTML', 'CSS', 'JavaScript','Railway(for deployment)'],
+      hostedUrl: 'https://discordclone-production-b0b9.up.railway.app/'
     }
   ];
 
